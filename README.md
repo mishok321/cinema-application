@@ -5,23 +5,21 @@ tickets for different sessions, where users can interact with movies,
 movie sessions, and more. The application supports authentication.
 
 ### Technologies used
-#### Java
-Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.
-
-#### Spring Framework
-The Spring Framework is an application framework and inversion of control container for the Java platform. The framework's core features can be used by any Java application, but there are extensions for building web applications on top of the Java EE (Enterprise Edition) platform.
-
-#### Hibernate
-Hibernate is a Java-based framework that simplifies the development of Java application to interact with the database.
-
-#### MySQL
-MySQL is a relational database management system based on SQL – Structured Query Language, which is used for adding, removing, and modifying information in the database.
-
-#### Jackson
-Jackson is a JSON parser and generator for Java, which is used to convert Java objects to JSON and vice versa.
-
-#### Maven
-Maven is a build automation tool used primarily for Java projects.
+* `spring-context` - 5.3.20
+* `spring-orm` - 5.3.20
+* `spring-webmvc` - 5.3.20
+* `spring-security-core` - 5.6.10
+* `spring-security-config` - 5.6.10
+* `spring-security-web` - 5.6.10
+* `commons-dbcp2` - 2.8.0
+* `hibernate-core` - 5.6.14.Final
+* `hibernate-java8` - 5.6.14.Final
+* `hibernate-validator` - 6.1.6.Final
+* `mysql-connector-java` - 8.0.22
+* `javax.servlet-api` - 4.0.1
+* `jackson-databind` - 2.14.1
+* `jackson-datatype-jsr310` - 2.13.0
+* `javax.annotation-api` - 1.3.2
 
 ### Getting started
 
@@ -35,13 +33,11 @@ To get started with this project, you can follow the steps below:
 6. Build and run the project using the IDE or by running the command mvn spring-boot:run in the project's root directory.
 7. Once the application is running, you can test the endpoints using Postman or any other REST client.
 
-### Authentication
-The application supports authentication using Spring Security.
-To access the protected endpoints, you need to include a valid JWT
-token in the request header. You can obtain a token by sending
-a POST request to the /login endpoint with valid credentials.
-The response will contain a JWT token that you can use
-in subsequent requests.
+### Authentication (Endpoints)
+- Registration - `POST /register` - registration new user
+- Login - `POST /login` - authentication
+- Logout - `GET /logout` - invalidate current session
+
 
 ## Conclusion
 This project provides a simple example of a REST application built using Java, Spring Framework, Hibernate, and MySQL. It demonstrates how to create and use REST endpoints, perform CRUD operations, and implement authentication using JWT tokens.
